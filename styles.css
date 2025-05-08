@@ -13,7 +13,6 @@
     --secondary-color: #2980b9;
 }
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +27,6 @@ body {
     transition: var(--transition);
 }
 
-/* Header */
 header {
     text-align: center;
     padding: 2rem;
@@ -48,7 +46,6 @@ header {
     object-fit: cover;
 }
 
-/* Botón de tema */
 .theme-toggle {
     position: absolute;
     top: 1rem;
@@ -63,7 +60,6 @@ header {
     font-size: 1.5rem;
     color: var(--text-color);
     padding: 0.5rem;
-    transition: var(--transition);
 }
 
 #theme-btn .fa-sun { display: none; }
@@ -72,7 +68,6 @@ header {
 [data-theme="dark"] #theme-btn .fa-sun { display: inline-block; }
 [data-theme="dark"] #theme-btn .fa-moon { display: none; }
 
-/* Menú hamburguesa */
 .menu-btn {
     position: absolute;
     top: 1rem;
@@ -112,7 +107,6 @@ header {
     color: var(--primary-color);
 }
 
-/* Secciones */
 section {
     padding: 2rem 1rem;
     opacity: 0;
@@ -132,7 +126,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Habilidades */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -159,7 +152,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Proyectos */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -180,7 +172,6 @@ h2 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Contacto */
 .social-links {
     display: flex;
     justify-content: center;
@@ -211,12 +202,6 @@ input, textarea {
     border: 2px solid var(--text-color);
     color: var(--text-color);
     border-radius: 5px;
-    transition: var(--transition);
-}
-
-input:focus, textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
 }
 
 button[type="submit"] {
@@ -236,7 +221,6 @@ button[type="submit"]:hover {
     background: var(--secondary-color);
 }
 
-/* Mensajes formulario */
 #form-message {
     max-width: 600px;
     margin: 1rem auto;
@@ -258,7 +242,6 @@ button[type="submit"]:hover {
     border: 1px solid #f5c6cb;
 }
 
-/* Footer */
 footer {
     background: var(--primary-color);
     color: white;
@@ -289,7 +272,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .menu-btn {
         display: block;
@@ -322,6 +304,11 @@ footer {
     section {
         padding: 2rem 1rem;
     }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
 
     h2 {
         font-size: 2rem;
