@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init('y3A8rmOoDJZR7qgQ0');
+        })();
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="theme-toggle">
+            <button id="theme-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-content">
+            <img src="tu-foto.jpg" alt="Fotografía" class="profile-img">
+            <h1>Aurora Poves</h1>
+            <p>Desarrolladora Web Trainee</p>
+        </div>
+    </header>
+
+    <!-- Secciones -->
+    <section id="about">
+        <h2>Sobre mí</h2>
+        <p>Desarrolladora web Trainee. Estudiante de DAW, en búsqueda de prácticas de formación (marzo 2026).
+  Cuento con interés, versatilidad técnica y pensamiento crítico. Mi capacidad analítica, potenciada por mi afición a la escalada y el estudio de la historia, me permite adaptarme a retos multidisciplinares.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Tecnologías y Conocimientos</h2>
+        <div class="skills-container">
+            <p>Java</p>
+            <p>C#</p>
+            <p>Javascript</p>
+            <br>
+            <p>HTML 5</p>
+            <p>CSS 3</p>
+            <p>Bootstrap</p>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="projects-grid">
+            <p>Mini-proyectos Certificación Diseño Web Responsivo</p>
+            <p>Repositorio de lógica de programación con Java</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+        
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="subject" placeholder="Asunto">
+            <textarea name="message" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
