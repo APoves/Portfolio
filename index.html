@@ -1,42 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ... (mantener mismo head) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Poves - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // Inicializar EmailJS (Reemplazar con tu User ID)
+            emailjs.init('Ty3A8rmOoDJZR7qgQ0');
+        })();
+    </script>
+    <style>
+        /* Estilos básicos para visualización inmediata */
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .hidden { display: none; }
+    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header (mantener igual) ... -->
+    <header>
+        <!-- Botón Tema -->
+        <div class="theme-toggle">
+            <button id="theme-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        
+        <!-- Menú Hamburguesa -->
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Cabecera Principal -->
+        <div class="header-content">
+            <img src="tu-foto.jpg" alt="Aurora Poves" class="profile-img">
+            <h1>Aurora Poves Serradilla</h1>
+            <p>Desarrolladora Web Trainee</p>
+        </div>
+    </header>
 
-    <!-- Secciones (mantener igual) ... -->
+    <!-- Sección Sobre Mí -->
+    <section id="about">
+        <h2>Sobre mí</h2>
+        <p>Desarrolladora web Trainee. Estudiante de DAW, en búsqueda de prácticas de formación (marzo 2026).
+Cuento con interés, versatilidad técnica y pensamiento crítico. Mi capacidad analítica, potenciada por mi afición a la escalada y el estudio de la historia, me permite adaptarme a retos multidisciplinares.</p>
+    </section>
 
+    <!-- Sección Habilidades -->
+    <section id="skills">
+        <h2>Tecnologías y Conocimientos</h2>
+        <div class="skills-container">
+            <!-- Ejemplo de habilidad -->
+            <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>CSS 3</span>
+                <span>Bootstrap</span>
+                <span>Java</span>
+                <span>C#</span>
+                <span>Javascript</span>
+            </div>
+            <!-- Añadir más habilidades aquí -->
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects">
+        <h2>Proyectos Destacados</h2>
+        <div class="projects-grid">
+            <!-- Ejemplo de proyecto -->
+            <div class="project-card">
+                <h3>Proyecto 1</h3>
+                <p>Mini-proyectos certificación Diseño Web Responsivo</p>
+            </div>
+            <p>Mini-proyectos certificación Diseño Web Responsivo</p>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
     <section id="contact">
         <h2>Contacto</h2>
         <div class="social-links">
-            <!-- Añade tus enlaces reemplazando los # -->
-            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="mailto:tucorreo@ejemplo.com" title="Correo"><i class="fas fa-envelope"></i></a>
+            <!-- Actualizar enlaces -->
+            <a href="https://linkedin.com/in/auroramarinapoves" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/APoves" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:aurorapovesdev@gmail.com" title="Correo Electrónico">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
         
         <form id="contact-form">
-            <!-- ... (mantener mismo formulario) ... -->
+            <input type="text" name="name" placeholder="Nombre completo" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="text" name="subject" placeholder="Asunto (opcional)">
+            <textarea name="message" placeholder="Tu mensaje..." rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
         </form>
-        <div id="form-message"></div> <!-- Mensaje de estado del formulario -->
+        <div id="form-message"></div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>Creado por Aurora Poves Serradilla, Mayo 2025</p>
+            <p>Aurora Poves Serradilla. 2025.</p>
             <div class="footer-links">
-                <a href="https://github.com/tuusuario" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:tucorreo@ejemplo.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/APoves" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/auroramarinapoves" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:aurorapovesdev@gmail.comm">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
+            <p>Desarrollado con ❤️</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
     <script src="script.js"></script>
 </body>
 </html>
