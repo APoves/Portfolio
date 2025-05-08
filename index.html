@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurora Poves - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-            // Inicializar EmailJS (Reemplazar con tu User ID)
-            emailjs.init('user_y3A8rmOoDJZR7qgQ0');
-        })();
-    </script>
     <style>
         /* Estilos básicos para visualización inmediata */
         body { margin: 0; font-family: Arial, sans-serif; }
@@ -21,7 +14,6 @@
 </head>
 <body>
     <header>
-        <!-- Botón Tema -->
         <div class="theme-toggle">
             <button id="theme-btn">
                 <i class="fas fa-sun"></i>
@@ -29,7 +21,6 @@
             </button>
         </div>
         
-        <!-- Menú Hamburguesa -->
         <nav>
             <input type="checkbox" id="menu-toggle" class="hidden">
             <label for="menu-toggle" class="menu-btn">
@@ -45,7 +36,6 @@
             </ul>
         </nav>
         
-        <!-- Cabecera Principal -->
         <div class="header-content">
             <img src="tu-foto.jpg" alt="Aurora Poves" class="profile-img">
             <h1>Aurora Poves Serradilla</h1>
@@ -53,70 +43,79 @@
         </div>
     </header>
 
-    <!-- Sección Sobre Mí -->
     <section id="about">
         <h2>Sobre mí</h2>
-        <p>Desarrolladora web Trainee. Estudiante de DAW, en búsqueda de prácticas de formación (marzo 2026).
-Cuento con interés, versatilidad técnica y pensamiento crítico. Mi capacidad analítica, potenciada por mi afición a la escalada y el estudio de la historia, me permite adaptarme a retos multidisciplinares.</p>
+        <p>Desarrolladora web Trainee. Estudiante de DAW, en búsqueda de prácticas de formación (marzo 2026). Cuento con interés, versatilidad técnica y pensamiento crítico. Mi capacidad analítica, potenciada por mi afición a la escalada y el estudio de la historia, me permite adaptarme a retos multidisciplinares.</p>
     </section>
 
-    <!-- Sección Habilidades -->
     <section id="skills">
         <h2>Tecnologías y Conocimientos</h2>
         <div class="skills-container">
-            <!-- Ejemplo de habilidad -->
             <div class="skill-item">
                 <i class="fab fa-html5"></i>
-                <span>CSS 3</span>
-                <span>Bootstrap</span>
-                <span>Java</span>
-                <span>C#</span>
-                <span>Javascript</span>
+                <span>HTML5</span>
             </div>
-            <!-- Añadir más habilidades aquí -->
+            <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-bootstrap"></i>
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-microsoft"></i>
+                <span>C#</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
         </div>
     </section>
 
-    <!-- Sección Proyectos -->
     <section id="projects">
         <h2>Proyectos Destacados</h2>
         <div class="projects-grid">
-            <!-- Ejemplo de proyecto -->
             <div class="project-card">
-                <h3>Proyecto 1</h3>
-                <p>Mini-proyectos certificación Diseño Web Responsivo</p>
+                <h3>Certificación Diseño Web Responsivo</h3>
+                <p>Colección de mini-proyectos demostrando habilidades en diseño web responsivo.</p>
             </div>
-            <p>Mini-proyectos certificación Diseño Web Responsivo</p>
+             <div class="project-card">
+                <h3>Java</h3>
+                <p>Repositorio de ejercicios de lógica de programación con Java.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Sección Contacto -->
     <section id="contact">
         <h2>Contacto</h2>
         <div class="social-links">
-            <!-- Actualizar enlaces -->
-            <a href="https://linkedin.com/in/auroramarinapoves" target="_blank" title="LinkedIn">
+            <a href="https://linkedin.com/in/auroramarinapoves" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/APoves" target="_blank" title="GitHub">
+            <a href="https://github.com/APoves" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="mailto:aurorapovesdev@gmail.com" title="Correo Electrónico">
+            <a href="mailto:aurorapovesdev@gmail.com">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
         
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Nombre completo" required>
+        <form id="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+            <input type="text" name="name" placeholder="Nombre" required>
             <input type="email" name="email" placeholder="Correo electrónico" required>
-            <input type="text" name="subject" placeholder="Asunto (opcional)">
-            <textarea name="message" placeholder="Tu mensaje..." rows="5" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
+            <input type="text" name="subject" placeholder="Asunto">
+            <textarea name="message" rows="5" placeholder="Escribe aquí tu mensaje" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+            <div id="form-message"></div>
         </form>
-        <div id="form-message"></div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>Aurora Poves Serradilla. 2025.</p>
@@ -127,7 +126,7 @@ Cuento con interés, versatilidad técnica y pensamiento crítico. Mi capacidad 
                 <a href="https://linkedin.com/in/auroramarinapoves" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:aurorapovesdev@gmail.comm">
+                <a href="mailto:aurorapovesdev@gmail.com">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
