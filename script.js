@@ -28,7 +28,7 @@ setTheme(localStorage.getItem('theme') || defaultTheme);
 // Toggle menú móvil
 menuBtn.addEventListener('click', () => {
   navLinks.classList.toggle('hidden');
-});
+});  
 
 // Animaciones scroll
 document.querySelectorAll('section').forEach(sec => {
@@ -47,15 +47,15 @@ form.addEventListener('submit', async e => {
       headers: { 'Accept': 'application/json' }
     });
     if (res.ok) {
-      statusDiv.textContent = 'Mensaje enviado.';
+      statusDiv.textContent = 'Mensaje enviado correctamente.';
       statusDiv.className = 'success';
       form.reset();
     } else {
-      statusDiv.textContent = 'Error al enviar el mensaje, por favor, vuelve a intentarlo.';
+      statusDiv.textContent = 'Error al enviar el mensaje. Por favor, vuelve a intentarlo.';
       statusDiv.className = 'error';
     }
   } catch {
-    statusDiv.textContent = 'Error de red. Por favor, vuelve a intentarlo';
+    statusDiv.textContent = 'Error de red. Por favor, vuelve a intentarlo.';
     statusDiv.className = 'error';
   }
 });
