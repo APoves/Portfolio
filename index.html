@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurora Poves - Portfolio</title>
-  <!-- Favicon corregido -->
   <link rel="icon" href="https://raw.githubusercontent.com/APoves/Portfolio/main/img/favicon.svg" type="image/svg+xml">
-
+  
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
@@ -15,13 +14,11 @@
 </head>
 <body>
   <header>
-    <!-- Toggle Tema -->
     <div class="theme-toggle">
       <button id="btn-light" aria-label="Modo claro"><i class="fas fa-sun"></i></button>
       <button id="btn-dark" aria-label="Modo oscuro"><i class="fas fa-moon"></i></button>
     </div>
 
-    <!-- Navegación corregida -->
     <nav>
       <button class="menu-btn" aria-label="Mostrar/Ocultar menú">
         <span></span><span></span><span></span>
@@ -35,14 +32,12 @@
     </nav>
 
     <div class="header-content">
-      <!-- Imagen del logo corregida -->
       <img src="https://raw.githubusercontent.com/APoves/Portfolio/main/img/Logo.svg" 
            alt="Aurora Poves" 
            class="profile-img">
       <h1>Aurora Poves Serradilla</h1>
       <p class="subtitle">Desarrolladora Web Trainee</p>
       
-      <!-- Navegación corregida -->
       <nav class="header-nav">
         <ul>
           <li><a href="#about">Sobre mí</a></li>
@@ -54,7 +49,36 @@
     </div>
   </header>
 
-  <!-- Sección Proyectos corregida -->
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <div class="about-container">
+      <div class="about-img">
+        <img src="https://raw.githubusercontent.com/APoves/Portfolio/main/img/black.png"
+             alt="Aurora Poves"
+             class="profile-img">
+      </div>
+      <p>
+        Desarrolladora web Trainee. Estudiante de DAW, en búsqueda de prácticas de formación (marzo 2026).
+        <br><br>
+        Cuento con interés, versatilidad técnica y pensamiento crítico. 
+        <br><br>
+        Mi capacidad analítica, potenciada por mi afición a la escalada y el estudio de la historia, me permite adaptarme a retos multidisciplinares.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Tecnologías y Conocimientos</h2>
+    <div class="skills-container">
+      <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill-item"><i class="fab fa-microsoft"></i><span>C#</span></div>
+      <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="skill-item"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+    </div>
+  </section>
+
   <section id="projects">
     <h2>Proyectos Destacados</h2>
     <div class="projects-grid">
@@ -94,7 +118,7 @@
         <a href="mailto:aurorapovesdev@gmail.com">aurorapovesdev@gmail.com</a>
       </div>
     </div>
-    <!-- Formulario de contacto restaurado -->
+    
     <form id="contact-form" action="https://formspree.io/f/xbloybeq" method="POST">
       <input type="text" name="name" placeholder="Nombre" required>
       <input type="email" name="email" placeholder="Correo electrónico" required>
@@ -107,7 +131,7 @@
 
   <footer>
     <div class="footer-content">
-      <p>Aurora Poves Serradilla.    2025.</p>
+      <p>Aurora Poves Serradilla. 2025.</p>
       <div class="footer-links">
         <a href="https://github.com/APoves" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/auroramarinapoves" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -115,7 +139,7 @@
       </div>
       <p>aurorapovesdev@gmail.com</p>
       <p class="legal">
-        Los datos que facilites a través del formulario de contacto serán tratados por la propietaria del sitio web con la única finalidad de responder a las consultas enviadas. Puedes ejercer tus derechos de acceso a tu información, rectificación, supresión y oposición escribiéndome a aurorapovesdev@gmail.com.”
+        Los datos que facilites a través del formulario de contacto serán tratados por la propietaria del sitio web con la única finalidad de responder a las consultas enviadas. Puedes ejercer tus derechos de acceso a tu información, rectificación, supresión y oposición escribiéndome a aurorapovesdev@gmail.com.
       </p>
     </div>
   </footer>
