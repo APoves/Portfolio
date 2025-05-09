@@ -213,6 +213,31 @@ section h2 { text-align:center; }
   transform: translateY(-5px);
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
+
+/* Color de los títulos de proyectos */
+.project-card h3 {
+  color: var(--text-color); /* Usa el mismo color que el texto principal */
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+  opacity: 0.9;
+}
+
+.project-card:hover h3 {
+  color: var(--secondary-color); /* Color azul al hacer hover */
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Texto normal dentro de las tarjetas */
+.project-card p {
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover p {
+  opacity: 1;
+}
 .about-container {
   display: grid;
   grid-template-columns: auto 1fr;
