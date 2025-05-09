@@ -32,32 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Formulario
     const form = document.getElementById('contact-form');
-    const messageDiv = document.getElementById('form-message');
-
     form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
+    e.preventDefault();
+    
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        });
 
-            if (response.ok) {
-                messageDiv.textContent = 'Mensaje enviado correctamente.';
-                messageDiv.className = 'visible success';
-                form.reset();
-            } else {
-                throw new Error('Error en el servidor');
-            }
-        } catch (error) {
-            messageDiv.textContent = 'Error al enviar el mensaje. Por favor, vuelve a intentarlo.';
-            messageDiv.className = 'visible error';
+        if (response.ok) {
+            // Mostrar mensaje de éxito
+        } else {
+            // Mostrar mensaje de error
         }
-
-        setTimeout(() => {
-            messageDiv.className = '';
-        }, 5000);
-    });
+    } catch (error) {
+        // Manejar error de red
+    }
 });
