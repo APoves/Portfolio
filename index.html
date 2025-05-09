@@ -1,221 +1,128 @@
-/* Manteniendo los colores originales del primer código */
-:root {
-    --primary-color: #00A9FF ;
-    --secondary-color: #89CFF3;
-    --bg-color: #F0FAFF ;
-    --accent-color: #A0E9FF;
-    --text-color: #17153B ;
-    --border-color: #03346E;
-    --footer-bg-color: #89CFF3;
-    --footer-text-color: #F4F8D3;
-}
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Poves - Portfolio</title>
+  <!-- Favicon -->
+  <!-- <link rel="icon" href="ruta-a-tu-favicon.ico" type="image/x-icon"> -->
 
-}
-[data-theme="dark"] {
-    --bg-color: #021526;
-    --accent-color: #89CFF3;
-    --text-color: #F4F8D3 ;
-    --primary-color: #03346E;
-    --secondary-color: #004A69;
-    --border-color: #FFF4B7;
-    --footer-bg-color: #A0E9FF;
-    --footer-text-color: #17153B;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- Toggle Tema -->
+    <div class="theme-toggle">
+      <button id="btn-light" aria-label="Modo claro"><i class="fas fa-sun"></i></button>
+      <button id="btn-dark" aria-label="Modo oscuro"><i class="fas fa-moon"></i></button>
+    </div>
 
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Lato', sans-serif;
-  line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
-}
+    <!-- Navegación solo en móvil -->
+    <nav>
+      <button class="menu-btn" aria-label="Mostrar/Ocultar menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links hidden">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
 
-header {
-  position: relative;
-  text-align: center;
-  padding: 1.5rem;
-}
-.profile-img {
-  width:180px; height:180px;
-  border-radius:50%;
-  border:3px solid var(--accent-color);
-  object-fit:cover; margin:0 auto;
-}
-.subtitle {
-  margin:0.5rem 0 1rem;
-  font-family:'Montserrat',sans-serif;
-  font-weight:600;
-}
+    <div class="header-content">
+      <img src="tu-foto.jpg" alt="Aurora Poves" class="profile-img">
+      <h1>Aurora Poves Serradilla</h1>
+      <p class="subtitle">Desarrolladora Web Trainee</p>
+    </div>
+  </header>
 
-.theme-toggle {
-  position:absolute; top:1rem; right:1rem;
-  display:flex; gap:0.5rem;
-}
-.theme-toggle button {
-  background:none; border:none;
-  cursor:pointer; font-size:1.5rem;
-  color:var(--text-color); opacity:0.7;
-}
-.theme-toggle button[data-selected] { opacity:1; }
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <div class="about-container">
+      <div class="about-img">
+        <!-- <img src="ruta-a-tu-foto.jpg" alt="Aurora Poves" /> -->
+      </div>
+      <p>
+        Desarrolladora web Trainee. Estudiante de DAW, en búsqueda de prácticas de formación (marzo 2026). 
+        <br>
+        Cuento con interés, versatilidad técnica y pensamiento crítico. Mi capacidad analítica me permite adaptarme a retos multidisciplinares.
+      </p>
+    </div>
+  </section>
 
-/* Navegación móvil */
-nav { display:none; }
-@media(max-width:768px) {
-  nav { display:block; }
-  .menu-btn {
-    position:absolute; top:1rem; left:1rem;
-    cursor:pointer; z-index:1000;
-  }
-  .menu-btn span {
-    display:block; width:25px; height:3px;
-    background:var(--text-color); margin:4px 0;
-  }
-  .nav-links {
-    list-style:none;
-    position:fixed; top:0; left:0;
-    width:100%; background:var(--bg-color);
-    max-height:0; overflow:hidden;
-    transition: max-height 0.3s ease;
-  }
-  .nav-links.hidden { max-height:0; }
-  .nav-links:not(.hidden) { max-height:300px; }
-  .nav-links li {
-    padding:1rem; text-align:center;
-  }
-}
+  <section id="skills">
+    <h2>Tecnologías y Conocimientos</h2>
+    <div class="skills-container">
+      <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill-item"><i class="fab fa-microsoft"></i><span>C#</span></div>
+      <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="skill-item"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+    </div>
+  </section>
 
-section { padding:2rem 1rem; }
-#about { padding-top:0; }
-.about-container {
-  max-width:800px; margin:0 auto; padding:2rem 1rem;
-  display:flex; flex-wrap:wrap;
-  align-items:center; justify-content:center;
-  gap:1.5rem;
-}
-.about-img img {
-  width:160px; height:160px;
-  border-radius:50%; object-fit:cover;
-}
-.about-container p {
-  flex:1; text-align:justify;
-}
+  <section id="projects">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Certificación Diseño Web Responsivo</h3>
+        <p>Colección de mini-proyectos demostrando habilidades en diseño responsive.</p>
+      </div>
+      <div class="project-card">
+        <h3>Java</h3>
+        <p>Repositorio de ejercicios de lógica de programación con Java.</p>
+      </div>
+    </div>
+  </section>
 
-#skills { text-align:center; }
-.skills-container {
-  display:grid; grid-template-columns:repeat(3,1fr);
-  gap:2rem; max-width:600px; margin:0 auto;
-  padding:1rem;
-}
-.skill-item {
-  display:flex; flex-direction:column;
-  align-items:center; padding:1rem;
-  border:1px solid var(--border-color);
-  border-radius:10px; transition:transform 0.3s;
-}
-.skill-item:hover { transform:translateY(-5px); }
-.skill-item i {
-  font-size:2.5rem; margin-bottom:0.8rem;
-}
+  <section id="contact">
+    <h2>Contacto</h2>
+    <div class="contact-list">
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://linkedin.com/in/auroramarinapoves" target="_blank">linkedin.com/in/auroramarinapoves</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/APoves" target="_blank">github.com/APoves</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:aurorapovesdev@gmail.com">aurorapovesdev@gmail.com</a>
+      </div>
+    </div>
+    <!-- Formulario de contacto restaurado -->
+    <form id="contact-form" action="https://formspree.io/f/xbloybeq" method="POST">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="text" name="subject" placeholder="Asunto">
+      <textarea name="message" rows="5" placeholder="Tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+      <div id="form-message"></div>
+    </form>
+  </section>
 
-.projects-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1.5rem; max-width:1000px; margin:0 auto;
-  padding:1rem;
-}
-section h2 { text-align:center; }
+  <footer>
+    <div class="footer-content">
+      <p>Aurora Poves Serradilla. 2025.</p>
+      <div class="footer-links">
+        <a href="https://github.com/APoves" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/auroramarinapoves" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:aurorapovesdev@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p>aurorapovesdev@gmail.com</p>
+      <p class="legal">
+        “Los datos que facilites a través del formulario de contacto serán tratados por Aurora Marina Poves con la única finalidad de responder a las consultas enviadas. Conservaré la información durante 6 meses. Puedes ejercer tus derechos de acceso, rectificación, supresión y oposición escribiéndome a [tu email].”
+      </p>
+    </div>
+  </footer>
 
-.project-card {
-  padding:1.5rem; border:1px solid var(--border-color);
-  border-radius:10px; transition:box-shadow 0.3s, transform 0.3s;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-
-/* Estilos originales del formulario */
-#contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1rem;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin: 0.5rem 0;
-    background: var(--accent-color);
-    border: 2px solid var(--border-color);
-    color: var(--text-color);
-    border-radius: 5px;
-    font-family: 'Lato', sans-serif;
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--secondary-color);
-}
-
-button[type="submit"] {
-    background: var(--primary-color);
-    color: white;
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background: var(--secondary-color);
-}
-
-#form-message {
-    max-width: 600px;
-    margin: 1rem auto;
-    padding: 1rem;
-    border-radius: 5px;
-    display: none;
-    text-align: center;
-}
-
-#form-message.success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-#form-message.error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-footer {
-  background-color: var(--footer-bg-color);
-  color: var(--footer-text-color);
-  padding: 1rem;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.footer-links {
-  display:flex; justify-content:center;
-  gap:1rem; margin:0.5rem 0;
-}
-.footer-links a {
-  color:white; font-size:1.2rem;
-}
-.legal {
-  font-size:0.75rem; margin-top:0.5rem;
-}
+  <script src="script.js"></script>
+</body>
+</html>
