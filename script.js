@@ -1,43 +1,55 @@
-// Detección preferencia usuario
+// Detección de la preferencia de tema del sistema
 const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
 // Elementos
 const btnLight = document.getElementById('btn-light');
-const btnDark = document.getElementById('btn-dark');
-const menuBtn = document.querySelector('.menu-btn');
+const btnDark  = document.getElementById('btn-dark');
+const menuBtn  = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
-const form = document.getElementById('contact-form');
-const statusDiv = document.getElementById('form-message');
+const form     = document.getElementById('contact-form');
+const statusDiv= document.getElementById('form-message');
 
-// Función para setear tema
+// ———————————————
+// Función para aplicar tema
+// ———————————————
 function setTheme(theme) {
-  document.body.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
+
+  // Marcar botón activo
   btnLight.removeAttribute('data-selected');
   btnDark.removeAttribute('data-selected');
   document.getElementById(`btn-${theme}`).setAttribute('data-selected', '');
 }
 
-// Eventos de botones
-btnLight.addEventListener('click', () => setTheme('light'));
-btnDark.addEventListener('click', () => setTheme('dark'));
-
-// Inicializar tema
+// ——————————————————————
+// Inicializar tema al cargar la página
+// ——————————————————————
 setTheme(localStorage.getItem('theme') || defaultTheme);
 
-// Toggle menú móvil
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('hidden');
-});  
+// Eventos de cambio de tema
+btnLight.addEventListener('click', () => setTheme('light'));
+btnDark .addEventListener('click', () => setTheme('dark'));
 
-// Animaciones scroll
+// ————————————————
+// Toggle menú móvil
+// ————————————————
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+// ———————————————
+// Animaciones on scroll
+// ———————————————
 document.querySelectorAll('section').forEach(sec => {
   new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) sec.classList.add('visible');
   }, { threshold: 0.1 }).observe(sec);
 });
 
+// —————————————————————————
 // Envío de formulario con feedback
+// —————————————————————————
 form.addEventListener('submit', async e => {
   e.preventDefault();
   try {
