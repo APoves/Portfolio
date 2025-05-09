@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurora Poves - Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg"
+  <!-- Favicon corregido -->
+  <link rel="icon" href="https://raw.githubusercontent.com/APoves/Portfolio/main/img/favicon.svg" type="image/svg+xml">
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -20,7 +21,7 @@
       <button id="btn-dark" aria-label="Modo oscuro"><i class="fas fa-moon"></i></button>
     </div>
 
-    <!-- Navegación solo en móvil -->
+    <!-- Navegación corregida -->
     <nav>
       <button class="menu-btn" aria-label="Mostrar/Ocultar menú">
         <span></span><span></span><span></span>
@@ -34,67 +35,46 @@
     </nav>
 
     <div class="header-content">
-      <img src="img/Logo.svg">
+      <!-- Imagen del logo corregida -->
+      <img src="https://raw.githubusercontent.com/APoves/Portfolio/main/img/Logo.svg" 
+           alt="Aurora Poves" 
+           class="profile-img">
       <h1>Aurora Poves Serradilla</h1>
       <p class="subtitle">Desarrolladora Web Trainee</p>
-      <!-- Navegación secciones dentro del header -->
+      
+      <!-- Navegación corregida -->
       <nav class="header-nav">
         <ul>
-          <a href="#about">Sobre mí</a></li>
-          <a href="#skills">Tecnologías y conocimientos</a></li>
-          <a href="#projects">Proyectos</a></li>
-          <a href="#contact">Contacto</a></li>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#skills">Tecnologías y conocimientos</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <div class="about-container">
-   
-      </div>
-      <p>
-        Desarrolladora web Trainee. Estudiante de DAW, en búsqueda de prácticas de formación (marzo 2026).
-        <br>
-        <br>
-        Cuento con interés, versatilidad técnica y pensamiento crítico. 
-        <br>
-        <br>
-        Mi capacidad analítica, potenciada por mi afición a la escalada y el estudio de la historia, me permite adaptarme a retos multidisciplinares.
-      </p>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Tecnologías y Conocimientos</h2>
-    <div class="skills-container">
-      <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
-      <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
-      <div class="skill-item"><i class="fab fa-microsoft"></i><span>C#</span></div>
-      <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
-      <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-      <div class="skill-item"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
-    </div>
-  </section>
-
+  <!-- Sección Proyectos corregida -->
   <section id="projects">
     <h2>Proyectos Destacados</h2>
     <div class="projects-grid">
-      <div class="project-card">
-        <a href="https://github.com/APoves/Responsive-Web-Design" class="project-card">
-      <div>
-        <h3>Certificación Diseño Web Responsivo</h3>
-        <p>Colección de mini-proyectos demostrando habilidades en diseño responsive.</p>
-      </div>
+      <a href="https://github.com/APoves/Responsive-Web-Design" 
+         class="project-card"
+         target="_blank">
+        <div>
+          <h3>Certificación Diseño Web Responsivo</h3>
+          <p>Colección de mini-proyectos demostrando habilidades en diseño responsive.</p>
+        </div>
       </a>
-      <div class="project-card">
-        <a href="https://github.com/APoves/Responsive-Web-Design" class="project-card">
-      <div>
-        <h3>Java</h3>
-        <p>Repositorio de ejercicios con Java.</p>
-      </div>
-        </a>
+      
+      <a href="https://github.com/APoves/Java" 
+         class="project-card"
+         target="_blank">
+        <div>
+          <h3>Java</h3>
+          <p>Repositorio de ejercicios de lógica de programación con Java.</p>
+        </div>
+      </a>
     </div>
   </section>
 
