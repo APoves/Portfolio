@@ -31,16 +31,91 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+/* Logo ok */
+.logo-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+/* Tamaños logo para dispositivos */
+@media (max-width: 767px) { /* Móvil */
+  .logo-img {
+    width: 120px;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) { /* Tablet */
+  .logo-img {
+    width: 140px;
+  }
+}
+@media (min-width: 1024px) { /* pc */
+  .logo-img {
+    width: 160px;
+  }
+}
+/* Hover solo en pc */
+@media (hover: hover) and (min-width: 1024px) {
+  .logo-img:hover {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
 header {
   position: relative;
   text-align: center;
   padding: 1.5rem;
 }
+
+/* Imagen de perfil  */
 .profile-img {
-  width:180px; height:180px;
-  border-radius:50%;
-  border:3px solid var(--accent-color);
-  object-fit:cover; margin:0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 1.5rem auto;
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Hover suave */
+.profile-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tamaños responsive */
+@media (max-width: 767px) {
+  .profile-img {
+    width: 140px;
+    height: 140px;
+    border-width: 1.5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .profile-img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* círculo sutil */
+.profile-img::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
 }
 .subtitle {
   margin:0.5rem 0 1rem;
