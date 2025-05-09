@@ -1,134 +1,145 @@
-<!DOCTYPE html>
-<html lang="es">
+está esto bien? <!DOCTYPE html>
+<html lang="es" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navbar Responsive</title>
-  <style>
-    :root {
-      --bg-color: #f0f0f0;
-      --text-color: #333;
-      --accent-color: #c2fbd7;
-      --primary-color: #000;
-      --border-color: #ccc;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Poves - Portfolio</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/APoves/Portfolio/main/img/favicon.svg.ico" type="image/x-icon">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--bg-color);
-    }
-
-    /* === NAVBAR GENERAL === */
-    nav {
-      background-color: var(--bg-color);
-      padding: 1rem 0;
-      position: relative;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .menu-btn {
-      display: none;
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      cursor: pointer;
-      z-index: 1001;
-    }
-
-    .menu-btn span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 4px 0;
-      background-color: var(--text-color);
-      transition: all 0.3s ease;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-      transition: max-height 0.3s ease;
-    }
-
-    .nav-links li a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .nav-links li a:hover {
-      background-color: var(--accent-color);
-      color: var(--primary-color);
-    }
-
-    /* === RESPONSIVE (MÓVIL) === */
-    @media (max-width: 768px) {
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--bg-color);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        border-top: 1px solid var(--border-color);
-      }
-
-      .nav-links.show {
-        max-height: 300px;
-        padding: 1rem 0;
-      }
-
-      .nav-links li a {
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0;
-      }
-    }
-  </style>
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <nav>
-    <div class="menu-btn" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+  <header>
+    <!-- Toggle Tema -->
+    <div class="theme-toggle">
+      <button id="btn-light" aria-label="Modo claro"><i class="fas fa-sun"></i></button>
+      <button id="btn-dark" aria-label="Modo oscuro"><i class="fas fa-moon"></i></button>
     </div>
-    <ul class="nav-links">
-      <li><a href="#about" onclick="closeMenu()">Sobre mí</a></li>
-      <li><a href="#skills" onclick="closeMenu()">Conocimientos</a></li>
-      <li><a href="#projects" onclick="closeMenu()">Proyectos</a></li>
-      <li><a href="#contact" onclick="closeMenu()">Contacto</a></li>
-    </ul>
-  </nav>
 
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('show');
-    }
+    <!-- Navegación solo en móvil -->
+    <nav>
+      <button class="menu-btn" aria-label="Mostrar/Ocultar menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links hidden">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
 
-    function closeMenu() {
-      if (window.innerWidth <= 768) {
-        document.querySelector('.nav-links').classList.remove('show');
-      }
-    }
-  </script>
+    <div class="header-content">
+      <img src="https://raw.githubusercontent.com/APoves/Portfolio/main/img/Logo.svg" alt="Aurora Poves class="profile-img">
+      <h1>Aurora Poves Serradilla</h1>
+      <p class="subtitle">Desarrolladora Web Trainee</p>
+      <!-- Navegación secciones dentro del header -->
+      <nav class="header-nav">
+        <ul>
+          <a href="#about">Sobre mí</a></li>
+          <a href="#skills">Tecnologías y conocimientos</a></li>
+          <a href="#projects">Proyectos</a></li>
+          <a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <div class="about-container">
+      <div class="about-img">
+        <img src="https://raw.githubusercontent.com/APoves/Portfolio/main/img/black.png"
+     alt="Aurora Poves"
+     class="profile-img">
+      <br>
+      </div>
+      <p>
+        Desarrolladora web Trainee. Estudiante de DAW, en búsqueda de prácticas de formación (marzo 2026).
+        <br>
+        <br>
+        Cuento con interés, versatilidad técnica y pensamiento crítico. 
+        <br>
+        <br>
+        Mi capacidad analítica, potenciada por mi afición a la escalada y el estudio de la historia, me permite adaptarme a retos multidisciplinares.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Tecnologías y Conocimientos</h2>
+    <div class="skills-container">
+      <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill-item"><i class="fab fa-microsoft"></i><span>C#</span></div>
+      <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="skill-item"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <a href="https://github.com/APoves/Responsive-Web-Design" target="_blank" class="project-card">
+        <h3>Certificación Diseño Web Responsivo</h3>
+        <p>Colección de mini-proyectos demostrando habilidades en diseño responsive.</p>
+      </div>
+      <div class="project-card">
+        <a href="https://github.com/APoves/Java" target="_blank" class="project-card">
+        <h3>Java</h3>
+        <p>Repositorio de ejercicios de lógica de programación con Java.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contacto</h2>
+    <div class="contact-list">
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://linkedin.com/in/auroramarinapoves" target="_blank">linkedin.com/in/auroramarinapoves</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/APoves" target="_blank">github.com/APoves</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:aurorapovesdev@gmail.com">aurorapovesdev@gmail.com</a>
+      </div>
+    </div>
+    <!-- Formulario de contacto restaurado -->
+    <form id="contact-form" action="https://formspree.io/f/xbloybeq" method="POST"="contact-form" action="https://formspree.io/f/xbloybeq" method="POST">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="text" name="subject" placeholder="Asunto">
+      <textarea name="message" rows="5" placeholder="Tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+      <div id="form-message"></div>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>Aurora Poves Serradilla.    2025.</p>
+      <div class="footer-links">
+        <a href="https://github.com/APoves" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/auroramarinapoves" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:aurorapovesdev@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p>aurorapovesdev@gmail.com</p>
+      <p class="legal">
+        Los datos que facilites a través del formulario de contacto serán tratados por la propietaria del sitio web con la única finalidad de responder a las consultas enviadas. Puedes ejercer tus derechos de acceso a tu información, rectificación, supresión y oposición escribiéndome a aurorapovesdev@gmail.com.”
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
