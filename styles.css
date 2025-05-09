@@ -1,26 +1,58 @@
-/* Manteniendo los colores originales del primer código */
 :root {
-    --primary-color: #00A9FF ;
-    --secondary-color: #89CFF3;
-    --bg-color: #F0FAFF ;
-    --accent-color: #A0E9FF;
-    --text-color: #17153B ;
-    --border-color: #03346E;
-    --footer-bg-color: #89CFF3;
-    --footer-text-color: #F4F8D3;
+  /* Tema claro - Complementario al dark */
+  --bg-color: #F8F5F0;        /* Beige claro (fondo principal suave) */
+  --text-color: #1A2A3A;      /* Azul grafito oscuro (texto principal) */
+  --accent-color: #c0d6df;    /* Turquesa pastel (botones y elementos clave) */
+  --primary-color: #2C4E6E;   /* Azul medio (títulos y énfasis) */
+  --secondary-color: #118ab2; /* #118ab2Turquesa claro (detalles secundarios) */
+  --border-color: #D3D8D6;    /* Gris azulado claro (bordes sutiles) */
+  --button-hover: #2C4E6E;    /* Azul medio (hover de botones) */
+  --footer-bg-color: #2C4E6E; /* Azul medio (footer) */
+  --footer-text-color: #F8F5F0; /* Beige claro (texto footer) */
 }
+
 
 [data-theme="dark"] {
     --bg-color: #021526;
-    --accent-color: #89CFF3;
+    --accent-color: #89GFF3;
     --text-color: #F4F8D3 ;
     --primary-color: #03346E;
     --secondary-color: #004A69;
-    --border-color: #FFF4B7;
-    --footer-bg-color: #A0E9FF;
-    --footer-text-color: #17153B;
+    --border-color: #FFF4B7; 
+    --button-hover: #005148;
+    --footer-bg-color: #021526;
+    --footer-text-color: #F4F8D3;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button, .btn {
+  background: var(--button-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: var(--button-hover);
+  color: #FFF8E7;
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--bg-color);
+  padding: 2rem;
+}
+
+.card {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+}
 
 body {
   background: var(--bg-color);
@@ -217,4 +249,69 @@ footer {
 }
 .legal {
   font-size:0.75rem; margin-top:0.5rem;
+}
+
+/* ========== SOBRE MÍ ========== */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem; /* Añadido padding lateral */
+}
+
+.about-container p {
+  text-align: center; /* Texto centrado */
+  line-height: 1.7;
+  max-width: 600px; /* Limitar ancho del texto */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 1rem;
+}
+
+/* ========== CONTACTO ========== */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrado vertical */
+  gap: 2rem; /* Mayor espacio entre elementos */
+  max-width: 500px; /* Ancho limitado para mejor lectura */
+  margin: 2rem auto; /* Centrar horizontalmente */
+  padding: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.contact-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center; /* Texto centrado debajo del icono */
+  color: var(--text-color);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.contact-item a:hover {
+  transform: translateY(-3px);
+}
+
+.contact-item i {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+/* ========== MÁRGENES GENERALES ========== */
+section {
+  padding: 4rem 1.5rem; /* Aumentar padding vertical */
+  max-width: 1200px; /* Limitar ancho máximo */
+  margin: 0 auto; /* Centrar secciones */
+}
+
+#contact {
+  padding-top: 2rem;
 }
