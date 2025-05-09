@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Temas
+    // Tema (light/dark)
     const themeBtn = document.getElementById('theme-btn');
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.body.setAttribute('data-theme', savedTheme);
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', newTheme);
     });
 
-    // AMini aimaciones en scroll
+    // Animaciones en scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -30,24 +30,51 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = e.target.checked ? 'hidden' : 'auto';
     });
 
-    // Formulario
+    // Formulario de contacto
     const form = document.getElementById('contact-form');
-    form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    try {
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        });
+    // Opcional: elemento donde mostraremos el estado del envío
+    const statusDiv = document.getElementById('form-status');
 
-        if (response.ok) {
-            // Mostrar mensaje de éxito
-        } else {
-            // Mostrar mensaje de error
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                // Mostrar mensaje de éxito
+                if (statusDiv) {
+                    statusDiv.textContent = 'Mensaje enviado.';
+                    statusDiv.classList.remove('error');
+                    statusDiv.classList.add('success');
+                } else {
+                    alert('Mensaje enviado.');
+                }
+                form.reset();
+            } else {
+                // Mostrar mensaje de error
+                if (statusDiv) {
+                    statusDiv.textContent = 'Mensaje no enviado. Por favor, vuelve a intentarlo.';
+                    statusDiv.classList.remove('success');
+                    statusDiv.classList.add('error');
+                } else {
+                    alert('Mensaje no enviado. Por favor, vuelve a intentarlo.');
+                }
+            }
+        } catch (error) {
+            // Manejar error de red
+            if (statusDiv) {
+                statusDiv.textContent = 'Error de red. Por favor, comprueba tu conexión e inténtalo de nuevo.';
+                statusDiv.classList.remove('success');
+                statusDiv.classList.add('error');
+            } else {
+                alert('Error de red. Por favor, comprueba tu conexión e inténtalo de nuevo.');
+            }
         }
-    } catch (error) {
-        // Manejar error de red
-    }
+    });
+
 });
