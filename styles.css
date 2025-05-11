@@ -1,4 +1,42 @@
-/* TEMAS */
+/* VARIABLES */
+:root {
+    --primary-color: #00A9FF;
+    --secondary-color: #89CFF3;
+    --bg-color: #F0FAFF;
+    --accent-color: #A0E9FF;
+    --text-color: #17153B;
+    --border-color: #03346E;
+    --footer-bg-color: #89CFF3;
+    --footer-text-color: #F4F8D3;
+}
+
+[data-theme="dark"] {
+    --bg-color: #021526;
+    --accent-color: #89CFF3;
+    --text-color: #F4F8D3;
+    --primary-color: #03346E;
+    --secondary-color: #004A69;
+    --border-color: #FFF4B7;
+    --footer-bg-color: #A0E9FF;
+    --footer-text-color: #17153B;
+}
+
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+b/* TEMAS */
 :root {
     --primary-color: #00A9FF;
     --secondary-color: #89CFF3;
@@ -89,41 +127,51 @@ header {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     background: var(--accent-color);
+    border-radius: 15px;
+    margin: 1rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
     font-size: 1.2rem;
     color: var(--text-color);
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 /* LOGO */
 .logo-img {
-    width: 240px;
+    width: 200px;
     height: auto;
-    margin: 1rem auto;
-    display: block;
+    margin: 2rem auto; 
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
     transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s ease;
 }
 
-@media (hover: hover) and (min-width: 1024px) {
-    .logo-img:hover {
-        transform: rotate(360deg) scale(1.1);
-    }
+.logo-img:hover {
+    transform: rotate(360deg) scale(1.1);
+    cursor: pointer;
 }
 
 /* PERFIL */
