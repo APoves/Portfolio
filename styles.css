@@ -554,6 +554,41 @@ footer {
     h1 {
         font-size: 2rem;
     }
+    header {
+        padding: 3rem 1rem 0;
+    }
+
+    .logo-img {
+        width: 220px;
+        margin-bottom: 1.5rem;
+    }
+
+    .nav-container {
+        max-width: 90%;
+        margin: 1.5rem auto;
+        padding: 0.6rem 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+    }
+
+    .about-img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 1.5rem;
+    }
+}
 }
 
 @media (max-width: 480px) {
@@ -568,5 +603,67 @@ footer {
     
     header {
         padding-top: 2.5rem;
+    }
+      .logo-img {
+        width: 200px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .about-img {
+        width: 160px;
+        height: 160px;
+    }
+}
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1rem 0;
+    }
+
+    .logo-img {
+        width: 220px;
+        margin-bottom: 1.5rem;
+    }
+
+    .nav-container {
+        max-width: 90%;
+        margin: 1.5rem auto;
+        padding: 0.6rem 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+    }
+
+    .about-img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 1.5rem;
     }
 }
