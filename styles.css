@@ -483,34 +483,36 @@ footer {
 
 @media (max-width: 767px) {
     .logo-img {
-        width: 120px;
-        margin-top: 1rem;
+        width: 180px; 
+        margin-top: 1.5rem;
     }
-
-    .profile-img {
-        width: 140px;
-        height: 140px;
-        border-width: 1.5px;
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .logo-img {
-        width: 140px;
-    }
-
-    .profile-img {
-        width: 160px;
-        height: 160px;
+        width: 220px; 
     }
 }
 
 @media (min-width: 1024px) {
     .logo-img {
-        width: 160px;
+        width: 260px;
     }
-
-    .skills-container {
-        grid-template-rows: repeat(2, auto);
+    
+    .nav-links {
+        gap: 3rem;
+    }
+    
+    .nav-links a {
+        font-size: 1.3rem;
     }
 }
