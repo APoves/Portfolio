@@ -1,23 +1,4 @@
-// Detección de la preferencia de tema del sistema
-const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-// Elementos
-const btnLight = document.getElementById('btn-light');
-const btnDark  = document.getElementById('btn-dark');
-const menuBtn  = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-const form     = document.getElementById('contact-form');
-const statusDiv= document.getElementById('form-message');
-
-// ———————————————
-// Función para aplicar tema
-// ———————————————
-function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-
-  // Marcar botón activo
-  btnLight.removeAttribute('data-selected');
+cted');
   btnDark.removeAttribute('data-selected');
   document.getElementById(`btn-${theme}`).setAttribute('data-selected', '');
 }
