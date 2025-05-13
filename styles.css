@@ -1,6 +1,4 @@
-/*=============================
-=            TEMAS           =
-=============================*/
+/*TEMAS */
 
 :root {
     --primary-color: #00A9FF;
@@ -10,7 +8,7 @@
     --text-color: #17153B;
     --border-color: #03346E;
     --footer-bg-color: #89CFF3;
-    --footer-text-color: #F4F8D3;
+    --footer-text-color: #17153B;
 }
 
 [data-theme="dark"] {
@@ -26,9 +24,7 @@
 
 
 
-/*=============================
-=           GENERAL          =
-=============================*/
+/* GENERAL */
 
 * {
     margin: 0;
@@ -50,9 +46,7 @@ body {
 }
 
 
-/*=============================
-=         TIPOGRAFÍA         =
-=============================*/
+/* TIPOGRAFÍA */
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
@@ -88,9 +82,7 @@ button {
 }
 
 
-/*=============================
-=           HEADER           =
-=============================*/
+/* HEADER */
 
 header {
     position: relative;
@@ -122,9 +114,7 @@ header {
 }
 
 
-/*=============================
-=             NAV            =
-=============================*/
+/* NAV */
 
 [data-theme="dark"] .nav-container {
     box-shadow: 0 2px 8px rgba(255,255,255,0.1);
@@ -136,10 +126,12 @@ header {
     padding: 0.5rem 1rem;
     background: var(--accent-color);
     border-radius: 15px;
-    /*margin: 2rem auto 1rem;*/ 
     margin: 1rem auto;
     max-width: fit-content;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 100;
+    border: 2px solid var(--border-color);
 }
 
 .nav-links {
@@ -163,9 +155,7 @@ header {
 }
 
 
-/*=============================
-=           LOGO             =
-=============================*/
+/* LOGO */
 
 .logo-img {
     width: 500px;
@@ -182,10 +172,7 @@ header {
 
 
 
-
-/*=============================
-=          SECTIONS          =
-=============================*/
+/* SECTIONS */
 
 section {
     padding: 4rem 1.5rem;
@@ -194,9 +181,7 @@ section {
 }
 
 
-/*=============================
-=         SOBRE MÍ           =
-=============================*/
+/* SOBRE MÍ */
 
 .about-container {
     display: flex;
@@ -243,9 +228,7 @@ section {
 }
 
 
-/*=============================
-=        TECNOLOGÍAS         =
-=============================*/
+/* TECNOLOGÍAS */
 
 .skills-container {
     display: grid;
@@ -278,9 +261,7 @@ section {
 }
 
 
-/*=============================
-=          PROYECTOS         =
-=============================*/
+/* PROYECTOS */
 
 .projects-grid {
     display: grid;
@@ -330,9 +311,7 @@ section {
 }
 
 
-/*=============================
-=         CONTACTO           =
-=============================*/
+/* CONTACTO */
 
 .contact-list {
     display: flex;
@@ -383,6 +362,9 @@ section {
 .contact-item a:hover {
     transform: scale(1.1);
 }
+[data-theme="dark"] .contact-address {
+    color: #F4F8D3 !important;
+}
 
 
 /* Direcciones */
@@ -397,9 +379,7 @@ section {
     opacity: 0.7;
 }
 
-/*=============================
-=         FORMULARIO         =
-=============================*/
+/* FORMULARIO */
 
 #contact-form {
     max-width: 600px;
@@ -436,13 +416,11 @@ button[type="submit"]:hover {
 }
 
 
-/*=============================
-=            FOOTER          =
-=============================*/
+/* FOOTER */
 
 footer {
     background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
+    color: var(--text-color);
     padding: 1rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -468,9 +446,7 @@ footer {
 }
 
 
-/*=============================
-=        MODO OSCURO         =
-=============================*/
+/* MODO OSCURO */
 
 [data-theme="dark"] input,
 [data-theme="dark"] textarea {
@@ -492,9 +468,7 @@ footer {
 }
 
 
-/*=============================
-=        MEDIA QUERIES       =
-=============================*/
+/* MEDIA QUERIES */
 
 @media (max-width: 768px) {
     .about-container {
@@ -510,7 +484,7 @@ footer {
 
     .nav-container {
         position: fixed;
-        top: 1.5rem;
+        top: 2rem;
         left: 50%;
         transform: translateX(-50%);
         width: auto;
@@ -518,7 +492,11 @@ footer {
         padding: 0.3rem 0.8rem;
     }
     
-
+  .profile-img {
+        clip-path: circle(50%);
+        border-radius: 50%;
+    }
+    
     .logo-img {
         width: 220px;
         margin-top: 1.5rem;
@@ -559,6 +537,15 @@ footer {
         width: 220px;
     }
 }
+
+@media (max-width: 920px) {
+    .about-img {
+        clip-path: circle(50%);
+        border-radius: 50%;
+        shape-outside: circle(50%);
+    }
+}
+
 
 @media (min-width: 1024px) {
     .logo-img {
