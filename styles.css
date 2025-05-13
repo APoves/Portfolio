@@ -1,4 +1,5 @@
 /* TEMAS */
+
 :root {
     --primary-color: #00A9FF;
     --secondary-color: #89CFF3;
@@ -21,7 +22,9 @@
     --footer-text-color: #17153B;
 }
 
-/* GRAL */
+
+/* GENERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -41,7 +44,9 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
+
 /* TIPOGRAFÍAS */
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -74,7 +79,9 @@ h1 {
     font-weight: 500;
 }
 
-/* Header */
+
+/* HEADER */
+
 header {
     position: relative;
     text-align: center;
@@ -105,20 +112,9 @@ header {
     opacity: 1;
 }
 
-/* Logo */
-.logo-img {
-    width: 350px;
-    margin: 1rem auto;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-    transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
 
-.logo-img:hover {
-    transform: rotate(360deg) scale(1.1);
-    cursor: pointer;
-}
+/* NAV */
 
-/* Navegación */
 .nav-container {
     display: flex;
     justify-content: center;
@@ -153,41 +149,11 @@ header {
     transform: translateY(-2px);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .logo-img {
-        width: 200px;
-    }
-    
-    .nav-links {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .nav-links a {
-        font-size: 1rem;
-        padding: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-img {
-        width: 180px;
-    }
-    
-    .nav-links {
-        gap: 0.5rem;
-    }
-    
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-}
 
 /* LOGO */
+
 .logo-img {
-    width: 200px;
+    width: 400px;
     height: auto;
     margin: 2rem auto; 
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
@@ -199,40 +165,26 @@ header {
     cursor: pointer;
 }
 
+
 /* PERFIL */
+
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 200px; 
+    height: 200px;
     border-radius: 50%;
     margin: 1.5rem auto;
     border: 2px solid rgba(52, 152, 219, 0.3);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    object-fit: fit;
 }
 
 .profile-img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.profile-img::after {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border: 1px solid rgba(52, 152, 219, 0.1);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.subtitle {
-    margin: 0.5rem 0 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    transform: scale(1.1);
+    filter: brightness(1.1);
+    border-color: rgba(52, 152, 219, 0.7);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    filter: drop-shadow(0 0 6px rgba(52, 152, 219, 0.3));
 }
 
 section {
@@ -245,8 +197,11 @@ h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
+  
+
 
 /* SOBRE MÍ */
+
 .about-container {
     display: flex;
     align-items: center;
@@ -273,7 +228,9 @@ h2 {
     max-width: 600px;
 }
 
+
 /* TECNOLOGÍAS */
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -305,7 +262,9 @@ h2 {
     margin-bottom: 0.8rem;
 }
 
+
 /* PROYECTOS */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -353,7 +312,9 @@ h2 {
     opacity: 1;
 }
 
+
 /* CONTACTO */
+
 .contact-list {
     display: flex;
     flex-direction: column;
@@ -387,7 +348,9 @@ h2 {
     color: var(--primary-color);
 }
 
+
 /* FORMULARIO */
+
 #contact-form {
     max-width: 600px;
     margin: 2rem auto;
@@ -422,7 +385,9 @@ button[type="submit"]:hover {
     background: var(--secondary-color);
 }
 
+
 /* FOOTER */
+
 footer {
     background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
@@ -623,6 +588,38 @@ footer {
         height: 160px;
     }
 }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo-img {
+        width: 200px;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        width: 180px;
+    }
+    
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
 }
 
 
