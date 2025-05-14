@@ -120,9 +120,8 @@ header {
 }
 
 .nav-container {
-    /*background: var(--accent-color);*/
-    background: rgba(160, 233, 255, 0.95) !important; /* Usa tu variable --accent-color */
-    backdrop-filter: blur(8px); /* Efecto vidrio */
+    background: var(--accent-color);
+    backdrop-filter: blur(8px);
     border: 2px solid var(--border-color);
     display: flex;
     justify-content: center;
@@ -134,7 +133,7 @@ header {
     max-width: fit-content;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: relative;
-    z-index: 100;
+    z-index: 999;
     transition: transform 0.3s ease;
 }
 
@@ -555,7 +554,7 @@ footer {
         max-width: 90%;
         margin: 1.5rem auto;
     }
-  
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -590,7 +589,7 @@ footer {
       z-index: 1000;
     }
 
-    hamburger {
+    .hamburger {
     display: block !important; /
     background: rgba(160, 233, 255, 0.9);
   }
@@ -690,7 +689,6 @@ footer {
 
 
 @media (max-width: 480px) {
-  /* 1. Mostrar el icono hamburguesa */
   .hamburger {
     display: block;
   }
@@ -723,4 +721,5 @@ footer {
     .skills-container {
         grid-template-columns: 1fr;
     }
+}
 }
