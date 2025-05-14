@@ -2,6 +2,7 @@
 
 const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
+
 // Variables
 
 const btnLight = document.getElementById('btn-light');
