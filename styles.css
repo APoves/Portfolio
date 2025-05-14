@@ -555,15 +555,19 @@ footer {
         margin: 1.5rem auto;
     }
   
-    .nav-container.active {
-        left: 0;
-    }
-  
-    .nav-links {
+      .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         margin-top: 2rem;
     }
+
+
+    .nav-container.active .nav-links,
+    .nav-links.active {
+        display: flex;
+    }
+
 
     .nav-links:not(.hidden) {
         max-height: 300px;
