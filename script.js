@@ -62,11 +62,11 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Cierre menú (click fuera).
 
 document.addEventListener('click', (e) => {
-  if (!navContainer.contains(e.target) && 
-      !hamburger?.contains(e.target) &&
-      window.innerWidth <= 768) {
+  if (navContainer.classList.contains('active') && 
+     !navContainer.contains(e.target) && 
+     !hamburger.contains(e.target)) {
     navContainer.classList.remove('active');
-    hamburger?.classList.remove('active');
+    hamburger.classList.remove('active');
   }
 });
 
