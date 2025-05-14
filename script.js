@@ -38,7 +38,38 @@ btnLight.addEventListener('click', () => setTheme('light'));
 btnDark .addEventListener('click', () => setTheme('dark'));
 
 
-// Envío formulario.
+//Menú hamburg.
+
+const hamburger = document.querySelector('.hamburger');
+const navContainer = document.querySelector('.nav-container');
+
+hamburger.addEventListener('click', () => {
+  navContainer.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+// Cerrar menú (click en enlace).
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      navContainer.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+  });
+});
+
+// Cerrar menú (click fuera).
+document.addEventListener('click', (e) => {
+  if (!navContainer.contains(e.target) && 
+      !hamburger.contains(e.target) &&
+      window.innerWidth <= 768) {
+    navContainer.classList.remove('active');
+    hamburger.classList.remove('active');
+  }
+});
+
+
+// Envío formulario (+ feedback).
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
@@ -48,7 +79,6 @@ form.addEventListener('submit', async e => {
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     });
-//Feedback formulario.
     if (res.ok) {
       statusDiv.textContent = 'Mensaje enviado correctamente.';
       statusDiv.className = 'success';
