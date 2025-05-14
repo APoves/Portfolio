@@ -683,6 +683,26 @@ footer {
     }
 }
 
+
+@media (max-width: 480px) {
+  /* 1. Mostrar el icono hamburguesa */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+    
+  .nav-links.active,
+  .nav-container.active .nav-links {
+    display: flex;
+  }
+}
+
 @media (max-width: 400px) {
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
