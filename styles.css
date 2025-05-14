@@ -270,7 +270,36 @@ section {
     filter: drop-shadow(0 0 6px rgba(52, 152, 219, 0.3));
 }
 
-/* Botón CV */
+NUEVO
+.cv-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.about-cv-btn {
+    background: var(--accent-color) !important; /* Mismo que la nav bar */
+    border: 2px solid var(--border-color) !important;
+    color: var(--text-color) !important;
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.about-cv-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+ANTES
+
+
 .cv-download {
   position: absolute;
   top: 1rem;
@@ -310,6 +339,15 @@ section {
   50% { transform: translateY(-3px); }
 }
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.about-cv-btn:active {
+    animation: pulse 0.3s ease;
+}
 
 /* TECNOLOGÍAS */
 
@@ -651,7 +689,6 @@ footer {
         padding-top: 8rem;
     }
 
-    @media (max-width: 768px) {
   .cv-download {
     top: 0.5rem;
     left: 50%;
@@ -666,6 +703,14 @@ footer {
   .cv-btn {
     padding: 0.6rem;
   }
+}
+ .about-cv-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+}
+    
+.about-cv-btn i {
+    font-size: 1rem;
 }
 }
 
