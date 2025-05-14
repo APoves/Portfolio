@@ -1,22 +1,19 @@
-// Tema preferencia.
-
+// Tema preferencia
 const savedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const defaultTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+// Const.
+const btnLight = document.getElementById('btn-light');
+const btnDark = document.getElementById('btn-dark');
+const hamburger = document.querySelector('.hamburger');
+const navContainer = document.querySelector('.nav-container');
+const form = document.getElementById('contact-form');
+
+// Inicializar tema.
 document.documentElement.setAttribute('data-theme', defaultTheme);
 
-
-// Variables/constantes.
-
-const btnLight  = document.getElementById('btn-light');
-const btnDark   = document.getElementById('btn-dark');
-const navLinks  = document.querySelector('.nav-links');
-const form      = document.getElementById('contact-form');
-const statusDiv = document.getElementById('form-message');
-
-
-// Temas.
-
+// Función tema.
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
@@ -25,72 +22,58 @@ function setTheme(theme) {
   document.getElementById(`btn-${theme}`).setAttribute('data-selected', '');
 }
 
-
-// Inicializar tema al cargar.
-
-setTheme(defaultTheme);
-
-
-// Cambio de tema.
+// Eventos tema.
 btnLight.addEventListener('click', () => setTheme('light'));
-btnDark .addEventListener('click', () => setTheme('dark'));
-
+btnDark.addEventListener('click', () => setTheme('dark'));
 
 // Menú hamburg.
-
-const hamburger    = document.querySelector('.hamburger');
-const navContainer = document.querySelector('.nav-container');
-
-hamburger?.addEventListener('click', () => {
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation();
   navContainer.classList.toggle('active');
   hamburger.classList.toggle('active');
 });
 
-
-// Cierre menú (click en enlace):
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-      navContainer.classList.remove('active');
-      hamburger?.classList.remove('active');
-    }
-  });
-});
-
-
-// Cierre menú (click fuera).
-
+// Cerrar menú (click fuera).
 document.addEventListener('click', (e) => {
   if (navContainer.classList.contains('active') && 
-     !navContainer.contains(e.target) && 
-     !hamburger.contains(e.target)) {
+     !e.target.closest('.nav-container') && 
+     !e.target.closest('.hamburger')) {
     navContainer.classList.remove('active');
     hamburger.classList.remove('active');
   }
 });
 
+// Cerrar menú (click enlace).
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      navContainer.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+  });
+});
 
 // Formulario.
-
 form.addEventListener('submit', async e => {
   e.preventDefault();
+  const statusDiv = document.getElementById('form-message');
+  
   try {
     const res = await fetch(form.action, {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     });
-    if (res.ok) {
-      statusDiv.textContent = 'Mensaje enviado correctamente.';
-      statusDiv.className = 'success';
-      form.reset();
-    } else {
-      statusDiv.textContent = 'Error al enviar el mensaje. Por favor, vuelve a intentarlo.';
-      statusDiv.className = 'error';
-    }
+    
+    statusDiv.textContent = res.ok 
+      ? 'Mensaje enviado correctamente.' 
+      : 'Error al enviar el mensaje. Por favor, vuelve a intentarlo.';
+      
+    statusDiv.className = res.ok ? 'success' : 'error';
+    if (res.ok) form.reset();
+    
   } catch {
-    statusDiv.textContent = 'El mensaje no se ha podido enviar. Por favor, vuelve a intentarlo.';
+    statusDiv.textContent = 'Error de conexión. Inténtalo de nuevo.';
     statusDiv.className = 'error';
   }
 });
