@@ -562,6 +562,9 @@ footer {
         margin-top: 2rem;
     }
 
+      .nav-container.active {
+    left: 0 !important;
+  }
 
     .nav-container.active .nav-links,
     .nav-links.active {
@@ -585,10 +588,11 @@ footer {
       right: 1rem;
       z-index: 1000;
     }
-    .hamburger {
-        display: block;
-    }
-    
+
+    hamburger {
+    display: block !important; /
+    background: rgba(160, 233, 255, 0.9);
+  }
    .profile-img {
         clip-path: circle(50%);
         border-radius: 50%;
