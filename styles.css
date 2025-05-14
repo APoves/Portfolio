@@ -213,8 +213,6 @@ header {
     cursor: pointer;
 }
 
-
-
 /* SECTIONS */
 
 section {
@@ -295,6 +293,10 @@ NUEVO
     filter: brightness(1.1);
     transform: translateY(-2px);
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+[data-theme="dark"] .about-cv-btn {
+    background: var(--secondary-color) !important; /* Ajuste para mejor contraste */
+    border-color: var(--border-color) !important;
 }
 
 ANTES
