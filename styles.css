@@ -543,7 +543,7 @@ footer {
     .nav-container {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         height: 100vh;
         width: 250px;
         background: var(--accent-color);
