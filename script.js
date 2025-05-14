@@ -1,54 +1,44 @@
-// Detección preferencia tema.
-
-const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
+// Tema de preferencia.
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const defaultTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+document.documentElement.setAttribute('data-theme', defaultTheme);
 
 // Variables
-
 const btnLight = document.getElementById('btn-light');
 const btnDark  = document.getElementById('btn-dark');
 const navLinks = document.querySelector('.nav-links');
 const form     = document.getElementById('contact-form');
 const statusDiv= document.getElementById('form-message');
 
-
-// Función aplicar tema.
-
+// Función aplicar tema
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
 
-  
-// Marcar botón de tema actual.
-  
+  // Marcar botón de tema actual
   btnLight.removeAttribute('data-selected');
   btnDark.removeAttribute('data-selected');
   document.getElementById(`btn-${theme}`).setAttribute('data-selected', '');
 }
 
+// Inicializar tema al cargar
+setTheme(defaultTheme);
 
-// Inicializar tema por defecto.
-
-setTheme(localStorage.getItem('theme') || defaultTheme);
-
-
-// Eventos cambio de tema.
-
+// Eventos cambio de tema
 btnLight.addEventListener('click', () => setTheme('light'));
 btnDark .addEventListener('click', () => setTheme('dark'));
 
-
-//Menú hamburg.
-
+// Menú hamburguesa
 const hamburger = document.querySelector('.hamburger');
 const navContainer = document.querySelector('.nav-container');
 
-hamburger.addEventListener('click', () => {
+hamburger?.addEventListener('click', () => {
   navContainer.classList.toggle('active');
   hamburger.classList.toggle('active');
 });
 
-// Cerrar menú (click en enlace).
+// Cerrar menú (click en enlace)
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     if (window.innerWidth <= 768) {
@@ -58,7 +48,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// Cerrar menú (click fuera).
+// Cerrar menú (click fuera)
 document.addEventListener('click', (e) => {
   if (!navContainer.contains(e.target) && 
       !hamburger.contains(e.target) &&
@@ -68,9 +58,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
-// Envío formulario (+ feedback).
-
+// Envío formulario.
 form.addEventListener('submit', async e => {
   e.preventDefault();
   try {
