@@ -270,6 +270,46 @@ section {
     filter: drop-shadow(0 0 6px rgba(52, 152, 219, 0.3));
 }
 
+/* Botón CV */
+.cv-download {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+}
+
+.cv-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--primary-color);
+  color: white !important;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-color);
+}
+
+.cv-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cv-btn i {
+  font-size: 1.2rem;
+}
+
+.cv-btn:hover i {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
 
 /* TECNOLOGÍAS */
 
@@ -610,9 +650,30 @@ footer {
     header {
         padding-top: 8rem;
     }
+
+    @media (max-width: 768px) {
+  .cv-download {
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+  
+  .cv-btn span {
+    display: none;
+  }
+  
+  .cv-btn {
+    padding: 0.6rem;
+  }
+}
 }
 
-   
+@media (min-width: 769px) {
+  .cv-btn span {
+    display: inline-block;
+  }
+}
 
 /*  */
 
