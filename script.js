@@ -27,8 +27,7 @@ btnLight.addEventListener('click', () => setTheme('light'));
 btnDark.addEventListener('click', () => setTheme('dark'));
 
 // Menú hamburg.
-hamburger.addEventListener('click', (e) => {
-  e.stopPropagation();
+hamburger.addEventListener('click', () => {
   navContainer.classList.toggle('active');
   hamburger.classList.toggle('active');
 });
