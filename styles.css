@@ -169,7 +169,7 @@ header {
     top: 1rem;
     left: 1rem;
     z-index: 1001;
-    background: var(--accent-color);
+    (background: var(--accent-color);
     border: 2px solid var(--border-color);
     border-radius: 5px;
     padding: 0.5rem;
@@ -662,7 +662,7 @@ footer {
 
     .hamburger {
     display: block;
-    background: rgba(160, 233, 255, 0.9);
+    background: var(--accent-color);;
   }
    .profile-img {
         clip-path: circle(50%);
