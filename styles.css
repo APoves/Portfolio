@@ -717,10 +717,10 @@ footer {
         padding: 0.4rem 1rem;
     }
 }
-
+/* PC */
 @media (min-width: 769px) {
   .hamburger {
-    display: none;
+    display: none !important;
   }
 
   .nav-container {
