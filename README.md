@@ -1,6 +1,6 @@
 # Portfolio Web – Aurora Marina Poves
 
-Humilde portfolio personal como Desarrolladora Web Trainee.
+Portfolio personal como Desarrolladora Web Trainee.
 
 Desarrollado con HTML, CSS y JavaScript (vainilla).
 
@@ -26,20 +26,10 @@ portfolio/
 │ 
 └── README.md # Documentación.
 
-
-## Características
-
-- JavaScript puro (JS vainilla).
-- Diseño responsivo.
-- Sección de proyectos y enlaces.
-- Formulario de contacto.
-- Información de contacto.
-
 ##  Contacto;
 
 - **Email**: [auroramarinapoves@gmail.com](mailto:auroramarinapoves@gmail.com)
 - **LinkedIn**: [https://www.linkedin.com/in/auroramarinapoves/]([https://www.linkedin.com/in/tu_usuario](https://www.linkedin.com/in/auroramarinapoves/)
 
-
-Si quieres dejar feedback, indicarme posibles mejoras o simplemente saludar
+Si quieres dejar feedback, indicarme posibles mejoras o simplemente saludar, no te cortes :)
 
