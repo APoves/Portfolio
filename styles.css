@@ -810,6 +810,9 @@ footer {
         padding: 1rem;
         min-height: auto;
     }
+    .contact-item a {
+        font-size: 1rem;   
+    }
 }
 
 @media (max-width: 350px) {
