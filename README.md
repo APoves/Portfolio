@@ -1,9 +1,10 @@
 # Portfolio Web – Aurora Poves
 
 ## [https://aurorapoves.vercel.app/](https://aurorapoves.vercel.app/)
-
+<br>
 Portfolio personal como Desarrolladora Web Trainee. <br>
 Desarrollado con HTML, CSS y JavaScript (vainilla).
+<br>
 <br>
 
 ## Tecnologías utilizadas:
@@ -12,10 +13,12 @@ Desarrollado con HTML, CSS y JavaScript (vainilla).
 - **CSS3**: estilo, claridad visual y diseño responsive con media queries.
 - **JavaScript**: ligeras funcionalidades (selector de tema, menú y formulario externo).
 <br>
+<br>
 
 ## Diseño web responsivo:
 
 Diseño optimizado para diversos tamaños de pantalla, con media queries adecuadas para asegurar la buena experiencia de usuario en pantallas pequeñas.
+<br>
 <br>
 
 ## Estructura:
@@ -27,6 +30,7 @@ portfolio/ <br>
 ├── docs/ # Documentación adicional. <br>
 │── img/ # Imágenes utilizadas.<br>
 └── README.md # Documentación.
+<br>
 <br>
 
 ##  Contacto;
