@@ -22,12 +22,12 @@ Diseño optimizado para diversos tamaños de pantalla, con media queries adecuad
 
 
 ## Estructura:
-portfolio/ (br)
-├── index.html # Página única. (br)
-├── styles.css # Hoja de estilos.
-├── script.js # Funciones JavaScript. Scripts para interactividad.
-├── docs/ # Documentación adicional.
-│── img/ # Imágenes utilizadas.
+portfolio/ <br>
+├── index.html # Página única. <br>
+├── styles.css # Hoja de estilos. <br>
+├── script.js # Funciones JavaScript. Scripts para interactividad. <br>
+├── docs/ # Documentación adicional. <br>
+│── img/ # Imágenes utilizadas.<br>
 │ 
 └── README.md # Documentación.
 
