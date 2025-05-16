@@ -1,4 +1,4 @@
-# Portfolio Web – Aurora Poves
+# Portfolio Web
 
 ## [https://aurorapoves.vercel.app/](https://aurorapoves.vercel.app/)
 <br>
