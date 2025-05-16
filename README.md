@@ -2,7 +2,7 @@
 
 ## [https://aurorapoves.vercel.app/](https://aurorapoves.vercel.app/)
 
-Portfolio personal como Desarrolladora Web Trainee.
+Portfolio personal como Desarrolladora Web Trainee. <br>
 Desarrollado con HTML, CSS y JavaScript (vainilla).
 <br>
 
@@ -19,6 +19,7 @@ Diseño optimizado para diversos tamaños de pantalla, con media queries adecuad
 <br>
 
 ## Estructura:
+
 portfolio/ <br>
 ├── index.html # Página única. <br>
 ├── styles.css # Hoja de estilos. <br>
@@ -31,7 +32,7 @@ portfolio/ <br>
 ##  Contacto;
 
 - **Email**: [auroramarinapoves@gmail.com](mailto:auroramarinapoves@gmail.com)
-- **LinkedIn**: [https://www.linkedin.com/in/auroramarinapoves/]([https://www.linkedin.com/in/tu_usuario](https://www.linkedin.com/in/auroramarinapoves/)
+- **LinkedIn**: [https://www.linkedin.com/in/auroramarinapoves/](https://www.linkedin.com/in/auroramarinapoves/)
 <br>
 Si quieres dejar feedback, indicarme posibles mejoras o simplemente saludar, no te cortes :)
 
