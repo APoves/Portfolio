@@ -22,8 +22,8 @@ Diseño optimizado para diversos tamaños de pantalla, con media queries adecuad
 
 
 ## Estructura:
-portfolio/
-├── index.html # Página principal del portfolio.
+portfolio/ (br)
+├── index.html # Página única. (br)
 ├── styles.css # Hoja de estilos.
 ├── script.js # Funciones JavaScript. Scripts para interactividad.
 ├── docs/ # Documentación adicional.
