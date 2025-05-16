@@ -1,9 +1,8 @@
 # Portfolio Web – Aurora Poves
 
-[https://aurorapoves.vercel.app/](https://aurorapoves.vercel.app/)
+## [https://aurorapoves.vercel.app/](https://aurorapoves.vercel.app/)
 
 Portfolio personal como Desarrolladora Web Trainee.
-
 Desarrollado con HTML, CSS y JavaScript (vainilla).
 
 
