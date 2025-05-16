@@ -1,5 +1,7 @@
 # Portfolio Web – Aurora Marina Poves
 
+[[https://www.linkedin.com/in/auroramarinapoves/](https://aurorapoves.vercel.app/)
+
 Portfolio personal como Desarrolladora Web Trainee.
 
 Desarrollado con HTML, CSS y JavaScript (vainilla).
