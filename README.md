@@ -4,22 +4,19 @@
 
 Portfolio personal como Desarrolladora Web Trainee.
 Desarrollado con HTML, CSS y JavaScript (vainilla).
-
-
+<br>
 
 ## Tecnologías utilizadas:
 
 - **HTML5**: estructura del contenido.
 - **CSS3**: estilo, claridad visual y diseño responsive con media queries.
 - **JavaScript**: ligeras funcionalidades (selector de tema, menú y formulario externo).
-
-
+<br>
 
 ## Diseño web responsivo:
 
 Diseño optimizado para diversos tamaños de pantalla, con media queries adecuadas para asegurar la buena experiencia de usuario en pantallas pequeñas.
-
-
+<br>
 
 ## Estructura:
 portfolio/ <br>
@@ -28,15 +25,13 @@ portfolio/ <br>
 ├── script.js # Funciones JavaScript. Scripts para interactividad. <br>
 ├── docs/ # Documentación adicional. <br>
 │── img/ # Imágenes utilizadas.<br>
-│ 
 └── README.md # Documentación.
-
-
+<br>
 
 ##  Contacto;
 
 - **Email**: [auroramarinapoves@gmail.com](mailto:auroramarinapoves@gmail.com)
 - **LinkedIn**: [https://www.linkedin.com/in/auroramarinapoves/]([https://www.linkedin.com/in/tu_usuario](https://www.linkedin.com/in/auroramarinapoves/)
-
+<br>
 Si quieres dejar feedback, indicarme posibles mejoras o simplemente saludar, no te cortes :)
 
