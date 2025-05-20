@@ -1,7 +1,6 @@
 # Portfolio Web
 
 
-
 ## [https://aurorapoves.vercel.app/](https://aurorapoves.vercel.app/)
 <br>
 Portfolio personal como Desarrolladora Web Trainee. <br>
