@@ -38,5 +38,5 @@ portfolio/ <br>
 - **Email**: [auroramarinapoves@gmail.com](mailto:auroramarinapoves@gmail.com)
 - **LinkedIn**: [https://www.linkedin.com/in/auroramarinapoves/](https://www.linkedin.com/in/auroramarinapoves/)
 <br>
-Si quieres dejar feedback, indicarme posibles mejoras o simplemente saludar, no te cortes :)
+Si quieres dejar feedback, indicarme posibles mejoras o simplemente saludar, por favor, contacta conmigo.
 
