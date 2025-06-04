@@ -1,4 +1,6 @@
-# Portfolio Web ##En construcción
+# Portfolio Web (en construcción).
+> **📝 Nota:**  
+> Actualmente el portfolio está en fase de desarrollo.
 
 ## [https://aurorapoves.vercel.app/](https://aurorapoves.vercel.app/)
 <br>
