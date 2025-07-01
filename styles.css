@@ -163,7 +163,6 @@ header {
 }
 
 /* MENÚ */ 
-
 .hamburger {
     display: block;
     position: fixed;
@@ -212,6 +211,50 @@ header {
 .logo-img:hover {
     transform: rotate(360deg) scale(1.1);
     cursor: pointer;
+}
+
+
+/* NOMBRE ETIQUETA */
+
+.name-with-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Pill*/
+.badge-practicas {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+.badge-practicas {
+  animation: badge-pulse 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.badge-practicas:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .badge-practicas {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 /* SECTIONS */
@@ -439,19 +482,12 @@ section {
 
 #cursos {
   padding: 4rem 1rem;
-  background-color: var(--bg-secondary);
   text-align: center;
 }
 
 #cursos h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-}
-
-.cursos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
 }
 
 .curso-card {
@@ -920,9 +956,9 @@ footer {
     display: flex;
     flex-direction: column;
   }
-    
   
   .inline-cv-btn {
     margin: 1.5rem 0 0 0;
     align-self: flex-start;
   }
+}
