@@ -201,7 +201,7 @@ header {
 /* LOGO */
 
 .logo-img {
-    width: clamp(120px, 30vw, 280px);
+    width: clamp(140px, 40vw, 300px);
     height: auto;
     margin: 2rem auto;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
@@ -835,8 +835,7 @@ footer {
   }
   .logo-img {
     margin-top: 1.5rem;
-    width: clamp(100px, 25vw, 150px); /* Ajuste adicional para móviles */
-  }
+    width: clamp(100px, 25vw, 180px);
 }
   h1 {
     font-size: 2rem;
@@ -905,4 +904,3 @@ footer {
     gap: 0.5rem;
   }
 }
-
