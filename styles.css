@@ -971,6 +971,15 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+/* Big Desktop*/
+    @media (min-width: 1024px) {
+  .logo-img {
+    display: block;
+    margin: 2rem auto;
+    width: 240px;
+    height: auto;
+}
   
   .inline-cv-btn {
     margin: 1.5rem 0 0 0;
