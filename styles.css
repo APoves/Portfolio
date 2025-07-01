@@ -940,6 +940,15 @@ footer {
 }
 
 /* PC */
+@media (min-width: 860px) {
+  .name-with-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+    
 @media (min-width: 769px) {
   .hamburger {
     display: none !important;
