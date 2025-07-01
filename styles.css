@@ -163,6 +163,7 @@ header {
 }
 
 /* MENÚ */ 
+
 .hamburger {
     display: block;
     position: fixed;
@@ -504,6 +505,10 @@ section {
   background-color: var(--accent-hover);
 }
 
+  #cursos .compact-cv-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
 
 /* CONTACTO */
 
