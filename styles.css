@@ -835,7 +835,7 @@ footer {
   }
   .logo-img {
     margin-top: 1.5rem;
-    width: clamp(100px, 25vw, 180px);
+    width: clamp(130px, 25vw, 180px);
 }
   h1 {
     font-size: 2rem;
