@@ -62,11 +62,19 @@
     <h2>Sobre mí</h2>
     <div class="about-container">
       <div class="about-img">
-        <img src="https://raw.githubusercontent.com/APoves/Portfolio/main/img/black.png"
-            loading="lazy" alt="..."
-            alt="Foro de perfil"
-            loading="lazy"
-            class="profile-img">
+        <img
+          class="profile-img"
+          src="img/black-200.webp"
+          srcset="
+            img/black-140.webp 140w,
+            img/black-200.webp 200w,
+            img/black-400.webp 400w
+          "
+          sizes="
+            (max-width: 768px) 140px, 200px"
+          alt="Foto de perfil de Aurora Poves"
+          loading="lazy"
+        />
       </div>
       <div class="about-content">
         <p>
