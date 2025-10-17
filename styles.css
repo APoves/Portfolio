@@ -80,7 +80,19 @@ button {
     letter-spacing: 0.2px;
 }
 
+/*Link drive */
+.link-drive {
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: currentColor;
+  transition: opacity 0.2s ease-in-out;
+}
 
+.link-drive:hover {
+  opacity: 0.85;
+}
 /* HEADER */
 
 header {
